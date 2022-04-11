@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-.start-screen .start-container .start-content .button:hover {
+.start-screen .start-container .start-content .button:hover, .pets .pets-container .pets-content__button:hover, .pets .pets-container .pets-content .cards-conatiner .pets-card__button:hover, .pets .pets-container .pets-content .cards-conatiner .pets-card .pets-card:hover, .pets .pets-container .pets__button:hover {
   background: #FDDCC4;
   border: 2px solid #FDDCC4;
 }
@@ -118,8 +118,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.06em;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #B2B2B2;
+}
+
+a {
+  color: #292929;
 }
 
 .wrapper {
@@ -193,6 +201,34 @@ body {
   width: 443px;
 }
 
+.start-screen .header .header-nav__link {
+  color: #CDCDCD;
+}
+
+.start-screen .header .header-nav__link:hover {
+  color: #FFFFFF;
+}
+
+.start-screen .header .header-nav__link:active:after {
+  color: #FFFFFF;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #F1CDB3;
+  margin-top: 4px;
+}
+
+.start-screen .header .header-nav__link_choosed:after {
+  color: #FFFFFF;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #F1CDB3;
+  margin-top: 4px;
+}
+
 .start-screen .start-container {
   height: 728px;
   width: 100%;
@@ -229,6 +265,7 @@ body {
   font-size: 17px;
   letter-spacing: 1px;
   color: #292929;
+  cursor: pointer;
 }
 
 .about {
@@ -300,6 +337,7 @@ body {
   font-size: 17px;
   letter-spacing: 1px;
   color: #292929;
+  cursor: pointer;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -328,6 +366,7 @@ body {
   border: none;
   border-radius: 12px;
   background: #FAFAFA;
+  cursor: pointer;
 }
 
 .pets .pets-container .pets-content .cards-conatiner .pets-card__title {
@@ -345,6 +384,16 @@ body {
   font-size: 17px;
   letter-spacing: 1px;
   color: #292929;
+  cursor: pointer;
+}
+
+.pets .pets-container .pets-content .cards-conatiner .pets-card:hover {
+  background: #FFFFFF;
+}
+
+.pets .pets-container .pets-content .cards-conatiner .pets-card:hover .pets-card__button {
+  background: #FDDCC4;
+  border: #FDDCC4;
 }
 
 .pets .pets-container .pets__button {
@@ -357,6 +406,7 @@ body {
   font-size: 17px;
   letter-spacing: 1px;
   color: #292929;
+  cursor: pointer;
 }
 
 .help {
@@ -464,6 +514,7 @@ body {
   font-size: 17px;
   letter-spacing: 1px;
   color: #292929;
+  cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -473,6 +524,10 @@ body {
   font-size: 20px;
   letter-spacing: 0.06em;
   line-height: 23px;
+}
+
+.donation .donation-container .donation-content .donation-button .donation__card-number {
+  color: #545454;
 }
 
 .donation .donation-container .donation-content .donation__text {
@@ -514,6 +569,7 @@ body {
 .footer .footer-container .footer-content .footer__text {
   text-align: left;
   margin-left: 20px;
+  color: #F1CDB3;
 }
 
 .footer .footer__img {

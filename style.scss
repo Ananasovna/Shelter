@@ -51,6 +51,7 @@ $color-light-xl: #FFFFFF;
   font-size: 17px;
   letter-spacing: 1px;
   color: $color-dark-3xl;
+  cursor: pointer;
 }
 
 %button-hovered {
@@ -69,8 +70,17 @@ $color-light-xl: #FFFFFF;
   letter-spacing: 0.06em;
 }
 
+* {
+  scroll-behavior: smooth;
+ 
+}
+
 body {
   background: $color-dark-m;
+}
+
+a {
+  color: $color-dark-3xl;
 }
 
 .wrapper {
@@ -130,6 +140,30 @@ body {
     .header-nav {
       @extend %flex-block;
       width: 443px; 
+      &__link {
+        color: $color-dark-s;
+      }
+      &__link:hover {
+        color: $color-light-xl;
+      }
+      &__link:active:after {
+        color: $color-light-xl;
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: $color-primary;
+        margin-top: 4px;
+      }
+      &__link_choosed:after {
+        color: $color-light-xl;
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: $color-primary;
+        margin-top: 4px;
+      }
     }
     
   }
@@ -212,6 +246,9 @@ body {
         justify-content: center;
         align-items: center;
       }
+      &__button:hover {
+        @extend %button-hovered;
+      }
 
       .cards-conatiner {
         @extend %flex-block;
@@ -226,13 +263,23 @@ body {
           border: none;
           border-radius: 12px;
           background: $color-light-s;
-  
+          cursor: pointer;
           &__title {
             font-size: 20px;
             letter-spacing: 1px;
           }
           &__button {
             @include button(52px, 187px, none);
+          }
+          &__button:hover, .pets-card:hover {
+            @extend %button-hovered;
+          }
+        }
+        .pets-card:hover {
+          background: $color-light-xl;
+          .pets-card__button {
+            background: $color-primary-light;
+            border: $color-primary-light;
           }
         }
       }
@@ -242,6 +289,9 @@ body {
 
     .pets__button {
       @include button(52px, 261px, $color-primary);
+    }
+    .pets__button:hover {
+      @extend %button-hovered;
     }
 
 
@@ -265,7 +315,6 @@ body {
     flex-wrap: wrap;
     height: 281px;
     width: 1146px;
-    // border: 1px solid green;
     .help-icon {
       @extend %flex-block;
       flex-direction: column;
@@ -274,7 +323,6 @@ body {
       justify-content: space-between;
       height: 113px;
       margin: 0 60px;
-      // border: 1px solid red;
 
       &:first-child {
         margin-left: 0;
@@ -286,7 +334,6 @@ body {
 
       &__title {
         @extend %h4;
-        // border: 1px solid rgb(255, 183, 0);
       }
     }
   }
@@ -326,6 +373,9 @@ body {
         font-size: 20px;
         letter-spacing: 0.06em;
         line-height: 23px;
+        .donation__card-number {
+          color: $color-dark-l;
+        }
       }
       .donation__text {
         font-style: italic;
@@ -359,12 +409,11 @@ body {
       .footer__text {
         text-align: left;
         margin-left: 20px;
+        color: $color-primary;
       }
     }
   }
   .footer__img {
     display: block;
   }
-
-
 }
